@@ -1,16 +1,28 @@
-# React + Vite
+# Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React memory game built with Vite.
 
-Currently, two official plugins are available:
+## Deploying to Netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+`netlify.toml` configures Netlify to run `npm run build` and publish Vite's
+`dist` directory. In Netlify, set the **Base directory** to the folder that
+contains this project's `package.json` if the repository root is its parent.
+For this workspace's repository layout, that is `Memory Game/memoryGame`.
+If this project folder is the repository root, leave the Base directory blank.
 
-## React Compiler
+Do not publish the project source folder directly. The production build places
+the processed JavaScript modules and `favicon.svg` in `dist`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local development
 
-## Expanding the ESLint configuration
+```sh
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To create and preview a production build:
+
+```sh
+npm run build
+npm run preview
+```
